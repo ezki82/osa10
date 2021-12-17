@@ -1,13 +1,12 @@
 import React from 'react';
 import { Text, View, StyleSheet, Pressable } from 'react-native';
-import Constants from 'expo-constants';
 import theme from '../theme';
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop: Constants.statusBarHeight,
-    backgroundColor: theme.colors.appBarBackground,
-    justifyContent: 'center',
+    padding: 20,
+    paddingTop: 40,
+    backgroundColor: theme.colors.appBarBackground
   },
   text: {
     color: theme.colors.appBarText,

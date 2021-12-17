@@ -64,15 +64,31 @@ const itemInfoStyles = StyleSheet.create({
   container: {
     flexDirection: 'column',
     flexGrow: 1,
-    justifyContent: 'space-around'
+    justifyContent: 'space-around',
+    alignItems: 'center'
+  },
+  headerStyle: {
+    color: 'gray',
+    fontSize: 18,
+    paddingBottom: 5
+  }, 
+  numberStyles: {
+    color: 'black',
+    fontSize: 18,
+    fontWeight: 'bold',
+    paddingBottom: 5
   }
 });
 
-const ItemInfo = ({ header, info }) => {
+const ItemInfo = ({ header, number }) => {
+  let numberPlaceHolder = number;
+  if (number >= 1000) {
+    numberPlaceHolder = `${(number / 1000).toFixed(1)} k`;
+  }
   return (
     <View style={itemInfoStyles.container}>
-      <Text>{info}</Text>
-      <Text>{header}</Text>
+      <Text style={itemInfoStyles.numberStyles}>{numberPlaceHolder}</Text>
+      <Text style={itemInfoStyles.headerStyle}>{header}</Text>
     </View>
   );
 };
@@ -86,10 +102,10 @@ const itemInfoRowStyles = StyleSheet.create({
 const ItemInfoRow = ({ item }) => {
   return (
     <View style={itemInfoRowStyles.container}>
-      <ItemInfo header='Stars' info={item.stargazersCount} />
-      <ItemInfo header='Forks' info={item.forksCount} />
-      <ItemInfo header='Reviews' info={item.reviewCount} />
-      <ItemInfo header='Rating' info={item.ratingAverage} />
+      <ItemInfo header='Stars' number={item.stargazersCount}/>
+      <ItemInfo header='Forks' number={item.forksCount} />
+      <ItemInfo header='Reviews' number={item.reviewCount} />
+      <ItemInfo header='Rating' number={item.ratingAverage} />
     </View>
   );
 };
