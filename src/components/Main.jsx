@@ -2,12 +2,13 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { Switch, Route, Redirect } from 'react-router-native';
 import AppBar from './AppBar';
-import SignIn from './SignIn';
+//import SignIn from './SignIn';
 import RepositoryList from './RepositoryList';
+import SignIn from './SignIn';
 
 const styles = StyleSheet.create({
   container: {
-    flexGrow: 1,
+    flexGrow: 0,
     flexShrink: 1,
   },
 });
