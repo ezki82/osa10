@@ -1,18 +1,22 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, ScrollView } from 'react-native';
 import theme from '../theme';
 import AppBarTab from './AppBarTab';
 
 const styles = StyleSheet.create({
   container: {
     backgroundColor: theme.colors.appBarBackground,
-    flexGrow:1
+    flexDirection: 'row',
+    flexGrow: 1
   },
 });
 
 const AppBar = () => {
   return <View style={styles.container}>
-    <AppBarTab tabText='Repositories' />
+    <ScrollView horizontal>
+      <AppBarTab tabText='Repositories' route='/' />
+      <AppBarTab tabText='Sign in' route='/signin' />
+    </ScrollView>
   </View>;
 };
 
