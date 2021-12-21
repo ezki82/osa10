@@ -23,12 +23,12 @@ const theme = {
     fontSize: 20, 
     borderColor: 'gray',
     borderWidth: 2,
-    borderRadius: 10,
+    borderRadius: 5,
     margin: 10,
     padding: 10
   },
   pressable: {
-    borderRadius: 10,
+    borderRadius: 5,
     backgroundColor: 'blue',
     flexGrow: 1,
     alignItems: 'center',
