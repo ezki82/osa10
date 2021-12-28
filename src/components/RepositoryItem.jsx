@@ -17,7 +17,7 @@ const itemHeaderStyles = StyleSheet.create({
   nameText: {
     paddingBottom: 5,
     fontSize: 20,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   },
   descText: {
     paddingBottom: 5,
